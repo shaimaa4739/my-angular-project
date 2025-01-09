@@ -3,10 +3,11 @@ import { AuthService } from '../../services/auth.service';
 import { SHARED_IMPORTS } from '../../../../shared/shared-imports';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoginObj } from '../../models/register';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @Component({
   selector: 'app-login-form',
-  imports: [...SHARED_IMPORTS],
+  imports: [...SHARED_IMPORTS, MatCheckboxModule],
   templateUrl: './login-form.component.html',
   styleUrl: './login-form.component.scss'
 })

@@ -1,4 +1,9 @@
 @import 'assets/scss/variables';
+
+body {
+  font-family: 'Manrope', sans-serif !important;
+}
+
 .card-bg{
     background-image: url('assets/imgs/Picture.svg'); 
     background-size: cover;
@@ -23,3 +28,42 @@
     background-color: $--base-color !important;
     box-shadow: 0px 0px 0px 0px !important;
 }
+
+.min-h{
+    min-height: 100vh;
+  }
+
+  .font-600{
+    font-weight: 600;
+  }
+
+  input::placeholder {
+    color:#09093766 !important;
+    font-weight: 200 !important;
+  }
+
+  //  Material Input Field start 
+  .mat-mdc-text-field-wrapper {
+    background: #F4F4FF !important;
+  }
+  .mdc-line-ripple::before{
+      border: 0 !important;
+  }
+
+  .mat-mdc-form-field-subscript-wrapper{
+    display: none;
+  }
+
+  .highlighted-text{
+    color: #6251DD;
+  }
+
+  .mdc-checkbox__background{
+    border: 2px solid #6251DD !important;
+  }
+
+  .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background{
+    background-color: #6251DD !important;
+
+  }
+  //  Material Input Field end

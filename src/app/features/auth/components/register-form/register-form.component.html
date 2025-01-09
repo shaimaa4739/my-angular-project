@@ -1,39 +1,45 @@
-<img src="/assets/imgs/Logo.svg" alt="">
-<h5 class="light-grey-text">Create new acccount</h5>
-<h3 >Register</h3>
-<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-  <div class="row">
-    <div class="col-6">
-      <mat-form-field appearance="fill">
-        <mat-label>First Name</mat-label>
-        <input matInput formControlName="first_name" placeholder="John" />
-      </mat-form-field>
+<div class=" d-flex flex-column align-items-center justify-content-center min-h">
+<img class="mb-5" src="/assets/imgs/Logo.svg" alt="">
+
+
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="mb-4">
+      <h5 class="light-grey-text">Create new acccount</h5>
+      <h3 >Register</h3>
     </div>
-    <div class="col-6">
-      <mat-form-field appearance="fill">
-        <mat-label>Last Name</mat-label>
-        <input matInput formControlName="last_name" placeholder="Doe" />
-      </mat-form-field>
+    <div class="row">
+      <div class="col-6">
+        <label class="font-600">First Name</label>
+        <mat-form-field appearance="fill">
+          <input matInput formControlName="first_name" placeholder="John" />
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <label class="font-600">Last Name</label>
+        <mat-form-field appearance="fill">
+          <input matInput formControlName="last_name" placeholder="Doe" />
+        </mat-form-field>
+      </div>
     </div>
-  </div>
-
-  <mat-form-field appearance="fill">
-    <mat-label>Email</mat-label>
-    <input matInput formControlName="email" placeholder="john.doe@example.com" />
-  </mat-form-field>
-
-  <mat-form-field appearance="fill">
-    <mat-label>Password</mat-label>
-    <input matInput type="password" formControlName="password" placeholder="••••••••" />
-  </mat-form-field>
-
-  <mat-form-field appearance="fill">
-    <mat-label>Role</mat-label>
-    <mat-select formControlName="role">
-      <mat-option *ngFor="let role of roles" [value]="role">{{ role }}</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <button mat-raised-button color="primary" type="submit" class="orange-btn  ">Register</button>
-  <button class="mt-2 outlined-btn py-2">login</button>
-</form>
+  
+    <label class="font-600">Email</label>
+    <mat-form-field appearance="fill">
+      <input matInput formControlName="email" placeholder="john.doe@example.com" />
+    </mat-form-field>
+  
+    <label class="font-600">Password</label>
+    <mat-form-field appearance="fill">
+      <input matInput type="password" formControlName="password" placeholder="••••••••" />
+    </mat-form-field>
+  
+    <label class="font-600">Role</label>
+    <mat-form-field appearance="fill">
+      <mat-select formControlName="role">
+        <mat-option *ngFor="let role of roles" [value]="role">{{ role }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" type="submit" class="orange-btn  ">Register</button>
+    <button class="mt-2 outlined-btn py-2"  >login</button>
+  </form>
+</div>
