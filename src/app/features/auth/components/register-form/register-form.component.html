@@ -1,44 +1,39 @@
-<mat-card>
-    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+<img src="/assets/imgs/Logo.svg" alt="">
+<h5 class="light-grey-text">Create new acccount</h5>
+<h3 >Register</h3>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-6">
       <mat-form-field appearance="fill">
         <mat-label>First Name</mat-label>
         <input matInput formControlName="first_name" placeholder="John" />
-        <!-- <mat-error *ngIf="formControls?.[first_name].errors?.required">First Name is required</mat-error>
-        <mat-error *ngIf="formControls?.first_name?.errors?.minlength">First Name must be at least 2 characters long</mat-error>
-        <mat-error *ngIf="formControls?.first_name?.errors?.pattern">First Name must contain only letters</mat-error> -->
       </mat-form-field>
-  
+    </div>
+    <div class="col-6">
       <mat-form-field appearance="fill">
         <mat-label>Last Name</mat-label>
         <input matInput formControlName="last_name" placeholder="Doe" />
-        <!-- <mat-error *ngIf="formControls?.last_name?.errors?.required">Last Name is required</mat-error>
-        <mat-error *ngIf="formControls?.last_name?.errors?.minlength">Last Name must be at least 2 characters long</mat-error>
-        <mat-error *ngIf="formControls?.last_name?.errors?.pattern">Last Name must contain only letters</mat-error> -->
       </mat-form-field>
-  
-      <mat-form-field appearance="fill">
-        <mat-label>Email</mat-label>
-        <input matInput formControlName="email" placeholder="john.doe@example.com" />
-        <!-- <mat-error *ngIf="formControls?.email?.errors?.required">Email is required</mat-error>
-        <mat-error *ngIf="formControls?.email?.errors?.email">Invalid email address</mat-error> -->
-      </mat-form-field>
-  
-      <mat-form-field appearance="fill">
-        <mat-label>Password</mat-label>
-        <input matInput type="password" formControlName="password" placeholder="••••••••" />
-        <!-- <mat-error *ngIf="formControls?.password?.errors?.required">Password is required</mat-error>
-        <mat-error *ngIf="formControls?.password?.errors?.minlength">Password must be at least 8 characters long</mat-error>
-        <mat-error *ngIf="formControls?.password?.errors?.pattern">Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character</mat-error> -->
-      </mat-form-field>
-  
-      <mat-form-field appearance="fill">
-        <mat-label>Role</mat-label>
-        <mat-select formControlName="role">
-          <mat-option *ngFor="let role of roles" [value]="role">{{ role }}</mat-option>
-        </mat-select>
-        <!-- <mat-error *ngIf="formControls?.role?.errors?.required">Role is required</mat-error> -->
-      </mat-form-field>
-  
-      <button mat-raised-button color="primary" type="submit">Register</button>
-    </form>
-  </mat-card>
+    </div>
+  </div>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" placeholder="john.doe@example.com" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" formControlName="password" placeholder="••••••••" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Role</mat-label>
+    <mat-select formControlName="role">
+      <mat-option *ngFor="let role of roles" [value]="role">{{ role }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" class="orange-btn  ">Register</button>
+  <button class="mt-2 outlined-btn py-2">login</button>
+</form>
