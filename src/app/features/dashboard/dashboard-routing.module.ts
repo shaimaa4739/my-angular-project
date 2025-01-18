@@ -6,7 +6,7 @@ import { CartComponent } from './pages/cart/cart.component';
 
 const routes: Routes = [
     {
-      path:'',redirectTo:'register',pathMatch:'full'
+      path:'',redirectTo:'home',pathMatch:'full'
     },
     {
         path:'home',

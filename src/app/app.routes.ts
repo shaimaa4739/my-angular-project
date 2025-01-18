@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { pagelayoutResolver } from './core/resolvers/pagelayout.resolver';
 import { Pagelayout } from './core/enums/pagelayout';
+import { authGuard } from './features/auth/guards/auth.guard';
 
 export const routes: Routes = [
     {
@@ -14,9 +15,7 @@ export const routes: Routes = [
     {
         path:'dashboard',
         loadChildren:()=>import('./features/dashboard/dashboard.module').then(m=>m.DashboardModule),
-        resolve:{
-            layout:pagelayoutResolver(Pagelayout.Authorized)
-        }
+        canActivate:[authGuard]
     },
     {
         path:'**',

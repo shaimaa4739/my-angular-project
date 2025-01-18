@@ -21,13 +21,15 @@
       </mat-form-field>
     </div>
 
-    <div class="mb-5">
+    <div class="d-flex align-items-center justify-content-between mb-5">
       <mat-checkbox >
         <span class="highlighted-text">Remember me</span>
       </mat-checkbox>
+
+      <a class="highlighted-text clickable" [routerLink]="['/forget-password']">Forget password</a>
     </div>
   
     <button mat-raised-button class="w-100 orange-btn " color="primary" type="submit" >Login</button>
-    <button class="w-100 mt-2 outlined-btn py-2" color="primary">Register</button>
+    <button class="w-100 mt-2 outlined-btn py-2" color="primary" [routerLink]="['/register']">Register</button>
   </form>
 </div>

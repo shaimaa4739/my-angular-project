@@ -1,1 +1,26 @@
-<p>change-pass works!</p>
+<div class=" d-flex flex-column align-items-center justify-content-center min-h">
+    <img class="mb-5" src="/assets/imgs/Logo.svg" alt="">
+  
+    <form [formGroup]="passwordForm" (ngSubmit)="changePassword()">
+      <div class="mb-5">
+        <h5 class="light-grey-text">Welcome back!</h5>
+        <h3 >Change Your Password Easily  </h3>
+      </div>
+        
+      <div>
+        <label class="font-600" >Old Password</label>
+        <mat-form-field class="w-100" appearance="fill">
+          <input matInput formControlName="oldpassword" type="password" placeholder="••••••••" />
+        </mat-form-field>
+      </div>
+
+      <div>
+        <label class="font-600 mt-3" >New Password</label>
+        <mat-form-field class="w-100" appearance="fill">
+          <input matInput formControlName="newpassword" type="password" placeholder="••••••••" />
+        </mat-form-field>
+      </div>
+    
+      <button mat-raised-button class="w-100 orange-btn mt-3 " color="primary" type="submit" >Save</button>
+    </form>
+  </div>

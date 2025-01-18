@@ -8,7 +8,7 @@ import { ChangePassComponent } from './pages/change-pass/change-pass.component';
 
 const routes: Routes = [
   {
-    path:'',redirectTo:'register',pathMatch:'full'
+    path:'',redirectTo:'login',pathMatch:'full'
   },
   {
       path:'login',
@@ -23,11 +23,11 @@ const routes: Routes = [
     component:ForgetPassComponent
   },
   {
-    path:'reset-pass',
+    path:'reset-password',
     component:ResetPassComponent
   },
   {
-    path:'change-pass',
+    path:'change-password',
     component:ChangePassComponent
   },
 ];

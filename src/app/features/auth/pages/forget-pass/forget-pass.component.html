@@ -1,1 +1,19 @@
-<p>forget-pass works!</p>
+<div class=" d-flex flex-column align-items-center justify-content-center min-h">
+    <img class="mb-5" src="/assets/imgs/Logo.svg" alt="">
+  
+    <form [formGroup]="forgetPassForm" (ngSubmit)="forgetPass()">
+      <div class="mb-5">
+        <h5 class="light-grey-text">Welcome back!</h5>
+        <h3 >Forget Password  !!</h3>
+      </div>
+        
+      <div class="mb-2" >
+        <label class="font-600" >E-mail</label>
+        <mat-form-field class="w-100" appearance="fill">
+          <input matInput formControlName="email" type="email" placeholder="john.doe@example.com" />
+        </mat-form-field>
+      </div>
+    
+      <button [disabled]="forgetPassForm.invalid" class="w-100 mt-5 outlined-btn py-2" color="primary" >Send</button>
+    </form>
+  </div>
