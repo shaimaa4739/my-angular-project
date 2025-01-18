@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 export const SHARED_IMPORTS =[
     CommonModule,
     ReactiveFormsModule,
@@ -13,4 +14,5 @@ export const SHARED_IMPORTS =[
     MatButtonModule,
     MatSelectModule,
     MatCardModule,
+    MatIconModule 
 ]

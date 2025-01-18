@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { SHARED_IMPORTS } from '../../shared-imports';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [...SHARED_IMPORTS],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
