@@ -1,22 +1,28 @@
 import { Routes } from '@angular/router';
-import { LoginPageComponent } from './features/auth/pages/login-page/login-page.component';
-import { RegisterPageComponent } from './features/auth/pages/register-page/register-page.component';
-import { PageNotFoundComponent } from './features/auth/pages/page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
+import { pagelayoutResolver } from './core/resolvers/pagelayout.resolver';
+import { Pagelayout } from './core/enums/pagelayout';
 
 export const routes: Routes = [
     {
-        path:'',redirectTo:'register',pathMatch:'full'
+        path:'',
+        loadChildren:()=>import('./features/auth/auth.module').then(m=>m.AuthModule),
+        resolve:{
+            layout:pagelayoutResolver(Pagelayout.UnAuthorized)
+        }
     },
     {
-        path:'login',
-        component:LoginPageComponent
-    },
-    {
-        path:'register',
-        component:RegisterPageComponent
+        path:'dashboard',
+        loadChildren:()=>import('./features/dashboard/dashboard.module').then(m=>m.DashboardModule),
+        resolve:{
+            layout:pagelayoutResolver(Pagelayout.Authorized)
+        }
     },
     {
         path:'**',
-        component:PageNotFoundComponent
+        component:PageNotFoundComponent,
+        resolve:{
+            layout:pagelayoutResolver(Pagelayout.Error)
+        }
     }
 ];

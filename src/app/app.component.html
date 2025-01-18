@@ -1,1 +1,26 @@
-<router-outlet></router-outlet>
+@switch (_pagelayoutService.layout$ | async){
+    @case(PageLayout.Authorized){
+        <app-master-layout>
+            <router-outlet></router-outlet>
+        </app-master-layout>
+    }
+    @case(PageLayout.UnAuthorized){
+        <app-auth-layout>
+            <router-outlet></router-outlet>
+        </app-auth-layout>
+        
+    }
+    @case(PageLayout.Error){
+        <app-error-layout>
+            <router-outlet></router-outlet>
+        </app-error-layout>
+        
+    }
+
+    @default{
+        <app-auth-layout>
+            <router-outlet></router-outlet>
+        </app-auth-layout>
+    }
+
+}
