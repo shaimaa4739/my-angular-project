@@ -18,4 +18,15 @@ export class AppComponent {
 
   constructor(public _pagelayoutService: PagelayoutService){}
 
+  ngOnInit(){
+    this.initlizeAppTheme();
+  }
+
+  initlizeAppTheme(){
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark-theme');
+    }
+  }
+
 }

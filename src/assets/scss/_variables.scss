@@ -1,5 +1,15 @@
-$--action-color: #EF6B4A;
-$--primary-color: #393280;
-$--base-color: #fff;
-$--grey-text-color: #09093799;
-$--white: #fff
+@mixin light-theme {
+    --action-color: #EF6B4A;
+    --primary-color: #393280;
+    --base-color: #fff;
+    --grey-text-color: #09093799;
+    --white: #fff
+}
+
+@mixin dark-theme {
+    --action-color: #4b1c11;
+    --primary-color: #111018;
+    --base-color: #fff;
+    --grey-text-color: #09093799;
+    --white: #fff
+}

@@ -1,7 +1,12 @@
 @import 'assets/scss/variables';
 
 body {
+  @include light-theme;
   font-family: 'Manrope', sans-serif !important;
+}
+
+body.dark-theme {
+  @include dark-theme;
 }
 
 .card-bg{
@@ -14,18 +19,18 @@ body {
 }
 
 .light-grey-text{
-    color: $--grey-text-color;
+    color: var(--grey-text-color);
     font-weight: 600;
 }
 
 .orange-btn{
-    background-color: $--action-color  !important;
+    background-color: var(--action-color)  !important;
 }
 
 .outlined-btn{
-    border: 1px solid $--primary-color !important;
-    color: $--primary-color  !important;
-    background-color: $--base-color !important;
+    border: 1px solid var(--primary-color) !important;
+    color: var(--primary-color)  !important;
+    background-color: var(--base-color) !important;
     box-shadow: 0px 0px 0px 0px !important;
 }
 

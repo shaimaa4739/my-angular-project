@@ -31,7 +31,9 @@
 
         <div class="nav-actions d-flex align-items-center justify-content-center">
             <div class="action-tab">
-                <img src="/assets/imgs/nav-icons/Vector (8).svg" alt="">
+                <button (click)="toggleTheme()">
+                    <mat-icon>{{ isDarkTheme ? 'brightness_3' : 'brightness_5' }}</mat-icon>
+                </button>
             </div>
             <div class="vertical-line"></div>
             <div class="action-tab">
