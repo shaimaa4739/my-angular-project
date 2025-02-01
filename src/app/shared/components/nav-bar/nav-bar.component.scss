@@ -1,0 +1,24 @@
+nav{
+    padding: 10px 0px;
+}
+.usr-img{
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+    background-color: #C4C4C4;
+}
+.vertical-line{
+    content: '';
+    border: 1px solid #D1D1D1;
+    height: 25px;
+    margin: 0 25px;
+}
+a{
+    text-decoration: none;
+    color: #111111;
+    line-height: 21.78px;
+    font-weight: 600;
+}
+a:active{
+    color: #ED553B;
+}
